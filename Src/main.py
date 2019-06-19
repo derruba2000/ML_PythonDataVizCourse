@@ -4,6 +4,7 @@ import SubModule.EX01AccessingDatawithPandas as EX01
 import SubModule.EX02FilteringDatawithPandas as EX02
 import SubModule.EX03Univariateplottingwithpandas as EX03
 import SubModule.EX04Facetingwithseaborn as EX04
+import SubModule.EX05Multivariateplotting as EX05
 
 
 
@@ -28,6 +29,9 @@ else:
     if (sys.argv[1]=="4"):
         print("Exercise 04")
         EX04.RunExercise()
+    if (sys.argv[1]=="5"):
+        print("Exercise 05")
+        EX05.RunExercise()
 
 
 

@@ -23,3 +23,10 @@ def RunExercise():
                                         footballers['Value (M)']/1000)
     footballers = footballers.assign(Value=footballers['Value (M)'],
                                     Position=footballers['Preferred Positions'].str.split().str[0])
+    
+    
+    sns.lmplot(x='Value', y='Overall', hue='Position', 
+           data=footballers.loc[footballers['Position'].isin(['ST', 'RW', 'LW'])], 
+           fit_reg=False)
+    
+    plt.show()
