@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 def RunExercise():
     print("Univariate plotting with pandas")
@@ -9,3 +10,6 @@ def RunExercise():
 
 
     reviews['province'].value_counts().head(10).plot.bar()
+    plt.show()
+    
+    

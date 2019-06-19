@@ -1,7 +1,7 @@
 import sys
 ###########################################
-import SubModule.E01AccessingDatawithPandas as EX01
-import SubModule.E02FilteringDatawithPandas as EX02
+import SubModule.EX01AccessingDatawithPandas as EX01
+import SubModule.EX02FilteringDatawithPandas as EX02
 import SubModule.EX03Univariateplottingwithpandas as EX03
 import SubModule.EX04Facetingwithseaborn as EX04
 
