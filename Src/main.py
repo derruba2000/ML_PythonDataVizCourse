@@ -2,6 +2,8 @@ import sys
 ###########################################
 import SubModule.E01AccessingDatawithPandas as EX01
 import SubModule.E02FilteringDatawithPandas as EX02
+import SubModule.EX03Univariateplottingwithpandas as EX03
+import SubModule.EX04Facetingwithseaborn as EX04
 
 
 
@@ -20,6 +22,12 @@ else:
     if (sys.argv[1]=="2"):
         print("Exercise 02")
         EX02.RunExercise()
+    if (sys.argv[1]=="3"):
+        print("Exercise 03")
+        EX03.RunExercise()
+    if (sys.argv[1]=="4"):
+        print("Exercise 04")
+        EX04.RunExercise()
 
 
 
