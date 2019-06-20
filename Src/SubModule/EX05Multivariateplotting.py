@@ -30,3 +30,41 @@ def RunExercise():
            fit_reg=False)
     
     plt.show()
+    
+    
+    f = (footballers
+         .loc[footballers['Position'].isin(['ST', 'GK'])]
+         .loc[:, ['Value', 'Overall', 'Aggression', 'Position']]
+    )
+    f = f[f["Overall"] >= 80]
+    f = f[f["Overall"] < 85]
+    f['Aggression'] = f['Aggression'].astype(float)
+
+    sns.boxplot(x="Overall", y="Aggression", hue='Position', data=f)
+    plt.show()
+    
+    
+    
+    f = (
+    footballers.loc[:, ['Acceleration', 'Aggression', 'Agility', 'Balance', 'Ball control']]
+        .applymap(lambda v: int(v) if str.isdecimal(v) else np.nan)
+        .dropna()
+    ).corr()
+
+    sns.heatmap(f, annot=True)
+    plt.show()
+    
+
+    f = (
+    footballers.iloc[:, 12:17]
+        .loc[footballers['Position'].isin(['ST', 'GK'])]
+        .applymap(lambda v: int(v) if str.isdecimal(v) else np.nan)
+        .dropna()
+    )
+    f['Position'] = footballers['Position']
+    f = f.sample(200)
+
+    parallel_coordinates(f, 'Position')
+    plt.show()
+    
+    
