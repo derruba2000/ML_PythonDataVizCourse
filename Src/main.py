@@ -7,6 +7,7 @@ import SubModule.EX03BBivariateplottingwithpandas as EX03B
 import SubModule.EX04Facetingwithseaborn as EX04
 import SubModule.EX05Multivariateplotting as EX05
 import SubModule.EX06Stylingyourplots as EX06
+import SubModule.EX07Subplots as EX07
 
 
 
@@ -46,4 +47,9 @@ else:
     if (sys.argv[1]=="6"):
         print("Exercise 06")
         EX06.RunExercise()
+
+
+    if (sys.argv[1]=="7"):
+        print("Exercise 07")
+        EX07.RunExercise()
 
